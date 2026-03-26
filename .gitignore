@@ -58,7 +58,7 @@ ExportedObj/
 
 Samples/
 
-# Unity3D generated meta files
+Samples/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
