@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7224002765100633360}
   - component: {fileID: 7853519403351043163}
   - component: {fileID: 2311837033035317601}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1
+  m_Radius: 20
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7853519403351043163
 Rigidbody:

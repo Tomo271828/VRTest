@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    [SerializeField] float speed = 0.05f;
+    float speed = 2.0f;
     [SerializeField] Transform l;
     [SerializeField] Transform r;
     [SerializeField] Transform HMD;
     [HideInInspector] public bool stop = false;
+    [SerializeField] float gravityScale = 0.50f;
+    Rigidbody rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        rb = HMD.gameObject.GetComponent<Rigidbody>();
+        rb.useGravity = false;
     }
 
     // Update is called once per frame
@@ -27,7 +30,7 @@ public class Move : MonoBehaviour
         fR = fR.normalized;
         fL = fL.normalized;
         float d = Vector3.Dot(fR,fL);
-        if(d > 0.50f)
+        if(d > 0.25f)
         {
             Vector3 dir = fR + fL;
             dir = dir.normalized;
@@ -36,8 +39,23 @@ public class Move : MonoBehaviour
             {
                 return;
             }
-            dir = dir.normalized;
-            HMD.position += dir * speed * Time.deltaTime;
+            float s = speed;
+            float leftTrigger = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger);
+            float rightTrigger = OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
+            if(leftTrigger > 0.50f)
+            {
+                s += speed * 0.50f;
+            }
+            if(rightTrigger > 0.50f)
+            {
+                s += speed * 0.50f;
+            }
+            HMD.position += dir * s * Time.deltaTime;
         }
+    }
+    void FixedUpdate()
+    {
+        Vector3 g = Physics.gravity * gravityScale;
+        rb.AddForce(g,ForceMode.Acceleration);
     }
 }
