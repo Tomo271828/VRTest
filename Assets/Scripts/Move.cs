@@ -7,7 +7,7 @@ public class Move : MonoBehaviour
     [SerializeField] Transform r;
     [SerializeField] Transform HMD;
     [HideInInspector] public bool stop = false;
-    [SerializeField] float gravityScale = 0.50f;
+    float gravityScale = 0.25f;
     Rigidbody rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -56,6 +56,10 @@ public class Move : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 g = Physics.gravity * gravityScale;
-        rb.AddForce(g,ForceMode.Acceleration);
+        Vector3 s = rb.linearVelocity;
+        if(s.y >= Physics.gravity.y * gravityScale)
+        {
+            rb.AddForce(g,ForceMode.Acceleration);
+        }
     }
 }

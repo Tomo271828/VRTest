@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2311837033035317601}
   m_Layer: 6
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,4 +174,4 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   size: 0
   move: 0
-  speed: 0.5
+  HMD: {fileID: 0}

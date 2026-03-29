@@ -2344,7 +2344,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   left: {fileID: 222749878}
   right: {fileID: 282818895}
-  sceneName: Tutorial
+  fade: {fileID: 1395501027}
+  sceneName: Stage2
 --- !u!4 &477797127
 Transform:
   m_ObjectHideFlags: 0
@@ -7556,6 +7557,7 @@ GameObject:
   - component: {fileID: 1395501024}
   - component: {fileID: 1395501023}
   - component: {fileID: 1395501022}
+  - component: {fileID: 1395501027}
   m_Layer: 0
   m_Name: '[BuildingBlock] Camera Rig'
   m_TagString: Untagged
@@ -7723,6 +7725,22 @@ Transform:
   - {fileID: 415839593}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1395501027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395501021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8e1d778abf442e4bec449c360e9e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeTime: 1
+  fadeColor: {r: 0.01, g: 0.01, b: 0.01, a: 1}
+  fadeOnStart: 1
+  renderQueue: 5000
 --- !u!1 &1396589017
 GameObject:
   m_ObjectHideFlags: 0

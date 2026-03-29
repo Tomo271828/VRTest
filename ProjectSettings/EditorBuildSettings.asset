@@ -11,6 +11,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 51ea4b0ac6fc2e848bf07a723e5bcf6f
+  - enabled: 1
+    path: Assets/Scenes/Stage1.unity
+    guid: 001746a6cce05214fae4f6afb89d9630
+  - enabled: 1
+    path: Assets/Scenes/Stage2.unity
+    guid: 4138282a7db7c9d429f6cf1cedcea23a
+  - enabled: 1
+    path: Assets/Scenes/Stage3.unity
+    guid: 7f94580d7279d264983c065991951421
+  - enabled: 1
+    path: Assets/Scenes/StageClearScene.unity
+    guid: c922b497d22cce94782c0928f885fba0
+  - enabled: 1
+    path: Assets/Scenes/GameClear.unity
+    guid: d0b15da223353834b92832063f124aa0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 455896be614a2194988f22bf658d5f3d, type: 2}

@@ -63,7 +63,7 @@ public class GoForward : MonoBehaviour
             dirHMD.y = 0.10f;
             dirHMD = dirHMD.normalized;
         }
-        HMD.GetComponent<Rigidbody>().AddForce(dirHMD * size * 100.0f / dHMD / dHMD,ForceMode.Impulse);
+        HMD.GetComponent<Rigidbody>().AddForce(dirHMD * size * 75.0f / dHMD / dHMD,ForceMode.Impulse);
         Destroy(this.gameObject);
     }
     void OnTriggerEnter(Collider other)
