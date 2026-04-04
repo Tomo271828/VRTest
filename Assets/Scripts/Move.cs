@@ -57,7 +57,7 @@ public class Move : MonoBehaviour
     {
         Vector3 g = Physics.gravity * gravityScale;
         Vector3 s = rb.linearVelocity;
-        if(s.y >= Physics.gravity.y * gravityScale)
+        if(s.y >= Physics.gravity.y * gravityScale * 2.0f)
         {
             rb.AddForce(g,ForceMode.Acceleration);
         }

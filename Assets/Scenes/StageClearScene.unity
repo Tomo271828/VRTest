@@ -4166,6 +4166,7 @@ MonoBehaviour:
   started: 0
   once: 1
   mode: 0
+  lastScene: 0
   other: {fileID: 1166896187}
   fade: {fileID: 1395501027}
 --- !u!65 &778902710
@@ -4187,7 +4188,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &778902711
 MeshRenderer:
@@ -7003,7 +7004,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1166896184
 MeshRenderer:
@@ -7088,6 +7089,7 @@ MonoBehaviour:
   started: 0
   once: 1
   mode: 1
+  lastScene: 0
   other: {fileID: 778902709}
   fade: {fileID: 1395501027}
 --- !u!54 &1166896188

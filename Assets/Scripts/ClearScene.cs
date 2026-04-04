@@ -16,8 +16,8 @@ public class ClearScene : MonoBehaviour
     [SerializeField] Expand right;
     [SerializeField] Charge charge;
     [SerializeField] Move move;
-    float time = Goal.clearTime;
-    float timeSum = Goal.clearTimeSum;
+    float time;
+    float timeSum;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,6 +26,8 @@ public class ClearScene : MonoBehaviour
         title.text = Goal.clearedScene + " Clear!!!";
         exitTMP.maxVisibleCharacters = 0;
         continueTMP.maxVisibleCharacters = 0;
+        time = Goal.clearTime;
+        timeSum = Goal.clearTimeSum;
         StartCoroutine(Roulette());
     }
 

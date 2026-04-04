@@ -10583,7 +10583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd3e95b428fe6af49906a72c37604dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorial: 1
+  tutorial: 0
   fade: {fileID: 1395501029}
   sceneName: StageClearScene
   nextStageName: Stage3

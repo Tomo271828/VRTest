@@ -10,6 +10,7 @@ public class Expand : MonoBehaviour
     //true: 次のステージ
     //false: やめる
     [SerializeField] bool mode = true;
+    [SerializeField] bool lastScene = false;
     [SerializeField] Expand other;
     [SerializeField] OVRScreenFade fade;
     float count = 0.0f;
@@ -18,7 +19,10 @@ public class Expand : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        if (lastScene)
+        {
+            started = true;
+        }
     }
 
     // Update is called once per frame
@@ -37,7 +41,10 @@ public class Expand : MonoBehaviour
         if (started && once && collision.gameObject.tag == "Bullet")
         {
             once = false;
-            other.once = false;
+            if(lastScene == false)
+            {
+                other.once = false;
+            }
             fade.fadeTime = 1.0f;
             fade.FadeOut();
             if (mode)
